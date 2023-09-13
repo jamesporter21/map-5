@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Schools Map 5 :: GEOCADDER</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <link href='jquery-ui.css' rel='stylesheet' />  
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" />
+  <link href='style.css' rel='stylesheet' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+  
+  
+  <div id='map'></div>
+
+  <!-- first filter -->
+  <fieldset id="filter-by-first-type">
+    <div id="list1" class="dropdown-check-list" tabindex="100">
+      <span class="anchor"
+        >Charter School Student Achievement Grades</span
+      ><img id="first-icon-filter" class="legend-image" src="charter.svg" />
+      <ul class="items">
+        <li>
+          <input
+            name="filter-by-first-type-input"
+            id="first-a"
+            type="checkbox"
+            value="first-a"
+            checked
+          /><label for="first-a">A</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-first-type-input"
+            id="first-b"
+            type="checkbox"
+            value="first-b"
+            checked
+          /><label for="first-b">B</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-first-type-input"
+            id="first-c"
+            type="checkbox"
+            value="first-c"
+            checked
+          /><label for="first-c"
+            >C</label
+          >
+        </li>
+        <li>
+          <input
+            name="filter-by-first-type-input"
+            id="first-d"
+            type="checkbox"
+            value="first-d"
+            checked
+          /><label for="first-d">D</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-first-type-input"
+            id="first-f"
+            type="checkbox"
+            value="first-f"
+            checked
+          /><label for="first-f">F</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-first-type-input"
+            id="first-n/a"
+            type="checkbox"
+            value="first-n/a"
+            checked
+          /><label for="first-n/a">N/A</label>
+        </li>
+      </ul>
+    </div>
+  </fieldset>
+  <!-- first filter -->
+
+  <!-- second filter -->
+  <fieldset id="filter-by-second-type">
+    <div id="list2" class="dropdown-check-list" tabindex="100">
+      <span class="anchor"
+        >Dallas ISD Student Achievement Grades</span
+      ><img id="second-icon-filter" class="legend-image" src="disd-school.svg" />
+      <ul class="items">
+        <li>
+          <input
+            name="filter-by-second-type-input"
+            id="second-a"
+            type="checkbox"
+            value="second-a"
+            checked
+          /><label for="second-a">A</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-second-type-input"
+            id="second-b"
+            type="checkbox"
+            value="second-b"
+            checked
+          /><label for="second-b">B</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-second-type-input"
+            id="second-c"
+            type="checkbox"
+            value="second-c"
+            checked
+          /><label for="second-c"
+            >C</label
+          >
+        </li>
+        <li>
+          <input
+            name="filter-by-second-type-input"
+            id="second-d"
+            type="checkbox"
+            value="second-d"
+            checked
+          /><label for="second-d">D</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-second-type-input"
+            id="second-f"
+            type="checkbox"
+            value="second-f"
+            checked
+          /><label for="second-f">F</label>
+        </li>
+        <li>
+          <input
+            name="filter-by-second-type-input"
+            id="second-n/a"
+            type="checkbox"
+            value="second-n/a"
+            checked
+          /><label for="second-n/a">N/A</label>
+        </li>
+      </ul>
+      </ul>
+    </div>
+  </fieldset>
+  <!-- second filter -->
+
+  <nav id="menu-two">
+    <span>EE - Early Education</span>
+    <span>PK - Pre-Kindergarten</span>
+    <span>KG - Kindergarten</span>
+  </nav>
+
+  <script src="script.js">
+  </script>
+
+</body>
+
+</html>
