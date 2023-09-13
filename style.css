@@ -466,17 +466,17 @@ div.toggle-filter-box {
 }
 
 img.legend-image {
-  width: 15px;
-  float: right;
-  margin-right: 29px; 
+  width: 24px;
+    float: right;
+    margin-right: 27px; 
 }
 
 img#first-icon-filter{
-  margin-top: -45px;
+  margin-top: -50px;
 }
 
 img#second-icon-filter{
-  margin-top: -32px;
+  margin-top: -36px;
 }
 /* end filter styling */
 
