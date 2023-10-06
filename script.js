@@ -68,21 +68,21 @@ var pointsForSearchArray = [];
 
 /// loading POIs data from Google Sheets table///
 $.getJSON(
-  "https://sheets.googleapis.com/v4/spreadsheets/1SLtDR6js3Tf6e64iqDalmUI6NXg01SB-AZBpjmRB1OE/values/Sheet1!C2:M3000?majorDimension=ROWS&key=AIzaSyB-2fHh4Fu0Gw92XtN8U724FH1zoy5xWhs",
+  "https://sheets.googleapis.com/v4/spreadsheets/1SLtDR6js3Tf6e64iqDalmUI6NXg01SB-AZBpjmRB1OE/values/Sheet1!C2:N3000?majorDimension=ROWS&key=AIzaSyB-2fHh4Fu0Gw92XtN8U724FH1zoy5xWhs",
   function (response) {
     response.values.forEach(function (marker) {
       var campusName = marker[0];
       var address = marker[1];
 
-      var latitude = parseFloat(marker[2]);
-      var longitude = parseFloat(marker[3]);
+      var latitude = parseFloat(marker[3]);
+      var longitude = parseFloat(marker[4]);
 
-      var districtCharterOperator = marker[5];
-      var gradespan = marker[6];
-      var accountabilityScore = marker[7];
-      var accountabilityGrade = marker[8];
-      var studentAchievementScore = marker[9];
-      var studentAchievementGrade = marker[10];
+      var districtCharterOperator = marker[6];
+      var gradespan = marker[7];
+      var accountabilityScore = marker[8];
+      var accountabilityGrade = marker[9];
+      var studentAchievementScore = marker[10];
+      var studentAchievementGrade = marker[11];
 
       var firstFilterCheckboxValue = studentAchievementGrade
         .toLowerCase()
@@ -93,7 +93,7 @@ $.getJSON(
         .toLowerCase()
         .replace(/\s/g, "-");
 
-      var type = marker[4];
+      var type = marker[5];
       var schoolType = "";
       if (type === "TRUE") {
         schoolType = "Charter";
